@@ -16,6 +16,7 @@ A collection of [Claude Code](https://claude.com/claude-code) skills. Each top-l
 
 | Skill | What it does |
 | --- | --- |
+| [commit-writer](commit-writer/) | Reads the pending diff, works out what it does, and proposes a commit message matching the repo's existing convention (falling back to Conventional Commits when the history is poor). Commits only after approval. |
 | [doc-converter](doc-converter/) | Converts files between Markdown, HTML and PDF via [`multi_convert`](https://github.com/tasteslikecobrachicken/multi_convert). Documents where PDF input degrades — extraction is a text dump, not structure. |
 
 ### Project setup and standards
@@ -24,6 +25,12 @@ A collection of [Claude Code](https://claude.com/claude-code) skills. Each top-l
 | --- | --- |
 | [project-scaffold](project-scaffold/) | Stands up a new Python, TypeScript, Java, Go or Rust project with layout, build config, lint, format, tests and CI. Prefers each ecosystem's own scaffolder over hand-written templates. |
 | [style-guide](style-guide/) | Defines and enforces a project's coding style, splitting mechanical rules (formatter config) from judgment rules (a written guide). Generates a block into `CLAUDE.md` so the rules apply without invoking the skill. |
+
+### Meta — auditing your Claude setup
+
+| Skill | What it does |
+| --- | --- |
+| [claude-suggest](claude-suggest/) | Audits a `CLAUDE.md` — repo-level or global — against a rubric and against what you've repeatedly had to restate across past sessions, and proposes edits for approval. Never edits without showing the proposal. |
 
 ## Installing
 
